@@ -1,6 +1,7 @@
 package com.ll.framwork.ioc;
 
 import com.ll.domain.testPost.testPost.repository.TestPostRepository;
+import com.ll.domain.testPost.testPost.service.TestFacadePostService;
 import com.ll.domain.testPost.testPost.service.TestPostService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -72,11 +73,13 @@ public class ApplicationContextTest {
         TestFacadePostService testFacadePostService = applicationContext
                 .genBean("testFacadePostService");
 
+        // assertThat(객체).hasFieldOrPropertyWithValue("필드명", 기대값)
         assertThat(testFacadePostService).hasFieldOrPropertyWithValue(
                 "testPostService",
                 applicationContext.genBean("testPostService")
         );
 
+        // assertThat(객체).hasFieldOrPropertyWithValue("필드명", 기대값)
         assertThat(testFacadePostService).hasFieldOrPropertyWithValue(
                 "testPostRepository",
                 applicationContext.genBean("testPostRepository")
