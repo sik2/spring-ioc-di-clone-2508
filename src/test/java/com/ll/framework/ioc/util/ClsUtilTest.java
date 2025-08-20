@@ -1,5 +1,6 @@
-package com.ll.framwork.ioc.util;
+package com.ll.framework.ioc.util;
 
+import com.ll.framework.ioc.util.sample.TestCar;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
